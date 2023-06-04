@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="Montserrat/Montserrat-VariableFont_wght.ttf">
     
-    <title>Transparent form</title>
+    <title>Login || Register</title>
 </head>
 <body>
     
     <div class="container">
         <div class="box">
-            <!----------------------------Login Form------------------------------>
+            <!--------------------------- Login Form ----------------------------->
             <div class="box-login" id="login">
 
                 <div class="top-header">
@@ -23,6 +24,11 @@
                     <div class="input-field">
                         <input type="text" class="input-box" id="logEmail" required>
                         <label for="logEmail">Email address</label>
+                            <div class="env-area">
+                                <div class="env-box" onclick="myLogPassword">
+                                    <i class="fa-regular fa-envelope" id="env"></i>
+                                </div>
+                            </div>
                     </div>
                     <div class="input-field">
                         <input type="password" class="input-box" id="logPassword" required>
@@ -47,7 +53,7 @@
                 </div>
                 
                 
-                <!-------------------- Register ------------------->
+                <!-------------------------Register ------------------------>
 
             </div>
         </div>
