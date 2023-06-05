@@ -22,10 +22,10 @@
                 </div>
                 <div class="input-group">
                     <div class="input-field">
-                        <input type="text" class="input-box" id="logEmail" required>
+                        <input type="email" class="input-box" id="logEmail" required>
                         <label for="logEmail">Email address</label>
                             <div class="env-area">
-                                <div class="env-box" onclick="myLogPassword">
+                                <div class="env-box">
                                     <i class="fa-regular fa-envelope" id="env"></i>
                                 </div>
                             </div>
@@ -34,7 +34,7 @@
                         <input type="password" class="input-box" id="logPassword" required>
                         <label for="logPassword">Password</label>
                             <div class="eye-area">
-                                <div class="eye-box" onclick="myLogPassword">
+                                <div class="eye-box" onclick="myLogPassword()">
                                     <i class="fa-regular fa-eye" id="eye"></i>
                                     <i class="fa-regular fa-eye-slash" id="eye-slash"></i>
                                 </div>
@@ -51,13 +51,120 @@
                         <a href="#">Forgot password?</a>
                     </div>
                 </div>
-                
-                
-                <!-------------------------Register ------------------------>
+            </div>
 
+        <!---------------- Register ------------------->
+        
+            <div class="box-reg" id="reg">
+
+                <div class="top-header">
+                    <h3>Join Us Now</h3>
+                    <small>We are happy to have you join us.</small> 
+                </div>
+                <div class="input-group">
+                    <div class="input-field">
+                        <input type="text" class="input-box" id="firstName" required>
+                        <label for="firstName">First name</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" class="input-box" id="lastName" required>
+                        <label for="lastName">Last name</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="email" class="input-box" id="regEmail" required>
+                        <label for="regEmail">Email address</label>
+                            <div class="env-area">
+                                <div class="env-box">
+                                    <i class="fa-regular fa-envelope" id="env"></i>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="input-box" id="regPassword" required>
+                        <label for="regPassword">Password</label>
+                            <div class="eye-area">
+                                <div class="eye-box" onclick="myRegPassword()">
+                                    <i class="fa-regular fa-eye" id="eye-2"></i>
+                                    <i class="fa-regular fa-eye-slash" id="eye-slash-2"></i>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="remember">
+                        <input type="checkbox" id="formCheck-2" class="check">
+                        <label for="formCheck-2">Remember Me</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="submit" class="input-submit" value="Sign up">
+                    </div>
+                </div>
+                
+    
+            </div>
+
+            <!------------------------- Switch ------------------------>
+
+            <div class="switch">
+                <a href="#" class="login" onclick="login()">Login</a>
+                <a href="#" class="register" onclick="register()">Register</a>
+                <div class="btn-active" id="btn"></div>
             </div>
         </div>
     </div>
+
+
+    <script>
+
+        function myLogPassword() {
+            var x = document.getElementById('logPassword');
+            var y = document.getElementById('eye');
+            var z = document.getElementById('eye-slash');
+
+            if(x.type === "password"){
+                x.type = "text";
+                y.style.opacity = "0";
+                z.style.opacity = "1";
+            }
+            else{
+                x.type = "password";
+                y.style.opacity = "1";
+                z.style.opacity = "0";
+            }
+        }
+        function myRegPassword(){
+            var x = document.getElementById('regPassword');
+            var y = document.getElementById('eye-2');
+            var z = document.getElementById('eye-slash-2');
+
+            if(x.type === "password"){
+                x.type = "text";
+                y.style.opacity = "0";
+                z.style.opacity = "1";
+            }
+            else{
+                x.type = "password";
+                y.style.opacity = "1";
+                z.style.opacity = "0";
+            }
+        }
+
+        var a = document.getElementById('login');
+        var b = document.getElementById('reg');
+        var c = document.getElementById('btn');
+
+
+        function login(){
+            a.style.top = '0';
+            b.style.top = '-620px';
+            c.style.left = '0';
+        }
+
+        function register(){
+            a.style.top = '-620px';
+            b.style.top = '0';
+            c.style.left = '50%';
+        }
+
+    </script>
 
 </body>
 </html>
